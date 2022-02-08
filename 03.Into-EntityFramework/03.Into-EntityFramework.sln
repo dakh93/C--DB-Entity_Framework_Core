@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Employees_From_Research
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Adding_New_Address_Update_Employee", "P06_Adding_New_Address_Update_Employee\P06_Adding_New_Address_Update_Employee.csproj", "{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_Employees_And_Projects", "P07_Employees_And_Projects\P07_Employees_And_Projects.csproj", "{F4EABE4A-15FA-473D-A7E6-6CEB2B49D02F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EABE4A-15FA-473D-A7E6-6CEB2B49D02F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EABE4A-15FA-473D-A7E6-6CEB2B49D02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EABE4A-15FA-473D-A7E6-6CEB2B49D02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EABE4A-15FA-473D-A7E6-6CEB2B49D02F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
