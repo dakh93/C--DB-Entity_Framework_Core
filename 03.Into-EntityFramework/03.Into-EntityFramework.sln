@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_Database_First", "P02_Database_First\P02_Database_First.csproj", "{52B8B722-C370-4ED7-833B-F3671B04E863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_Database_First", "P02_Database_First\P02_Database_First.csproj", "{52B8B722-C370-4ED7-833B-F3671B04E863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_Employees_Full_Information", "P03_Employees_Full_Information\P03_Employees_Full_Information.csproj", "{41238F18-EE89-435A-88E5-9BBD520F3941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_Employees_Full_Information", "P03_Employees_Full_Information\P03_Employees_Full_Information.csproj", "{41238F18-EE89-435A-88E5-9BBD520F3941}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_Employees_With_Salary_Over_50000", "P04_Employees_With_Salary_Over_50000\P04_Employees_With_Salary_Over_50000.csproj", "{44328C4B-4514-4F55-8B56-8746B01B609C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04_Employees_With_Salary_Over_50000", "P04_Employees_With_Salary_Over_50000\P04_Employees_With_Salary_Over_50000.csproj", "{44328C4B-4514-4F55-8B56-8746B01B609C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_Employees_From_Research_And_Development", "P05_Employees_From_Research_And_Development\P05_Employees_From_Research_And_Development.csproj", "{E889DA88-362B-4AA2-835E-5AD11DF48B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Employees_From_Research_And_Development", "P05_Employees_From_Research_And_Development\P05_Employees_From_Research_And_Development.csproj", "{E889DA88-362B-4AA2-835E-5AD11DF48B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Adding_New_Address_Update_Employee", "P06_Adding_New_Address_Update_Employee\P06_Adding_New_Address_Update_Employee.csproj", "{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E889DA88-362B-4AA2-835E-5AD11DF48B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E889DA88-362B-4AA2-835E-5AD11DF48B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E889DA88-362B-4AA2-835E-5AD11DF48B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EF4FE2-DCB1-497F-8166-DB2F328E26E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
