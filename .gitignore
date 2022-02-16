@@ -5,6 +5,7 @@
 
 *.docx
 *.sql
+*.zip
 
 # User-specific files
 *.rsuser

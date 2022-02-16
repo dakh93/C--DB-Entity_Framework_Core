@@ -23,6 +23,7 @@ namespace P02_Database_First.Data
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Project> Projects { get; set; } = null!;
         public virtual DbSet<Town> Towns { get; set; } = null!;
+        public virtual DbSet<EmployeesProjects> EmployeesProjects { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -130,6 +131,27 @@ namespace P02_Database_First.Data
 
                             j.IndexerProperty<int>("ProjectId").HasColumnName("ProjectID");
                         });
+            });
+
+            modelBuilder.Entity<EmployeesProjects>(entity =>
+            {
+                entity.HasKey(e => new { e.EmployeeId, e.ProjectId });
+
+                entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
+
+                entity.Property(e => e.ProjectId).HasColumnName("ProjectID");
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.EmployeesProjects)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_EmployeesProjects_Employees");
+
+                entity.HasOne(d => d.Project)
+                    .WithMany(p => p.EmployeesProjects)
+                    .HasForeignKey(d => d.ProjectId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_EmployeesProjects_Projects");
             });
 
             modelBuilder.Entity<Project>(entity =>

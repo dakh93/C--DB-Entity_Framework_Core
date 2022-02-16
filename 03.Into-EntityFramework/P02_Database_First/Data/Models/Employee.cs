@@ -29,6 +29,7 @@ namespace P02_Database_First.Data.Models
         public virtual ICollection<Department> Departments { get; set; }
         public virtual ICollection<Employee> InverseManager { get; set; }
 
+        public ICollection<EmployeesProjects> EmployeesProjects { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
     }
 }

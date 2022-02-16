@@ -17,5 +17,7 @@ namespace P02_Database_First.Data.Models
         public DateTime? EndDate { get; set; }
 
         public virtual ICollection<Employee> Employees { get; set; }
+
+        public ICollection<EmployeesProjects> EmployeesProjects { get; set; }
     }
 }
