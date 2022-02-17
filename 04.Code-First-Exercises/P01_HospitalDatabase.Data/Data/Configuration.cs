@@ -8,8 +8,9 @@ namespace P01_HospitalDatabase.Data
 {
     public class Configuration
     {
-        public const string ConnectionString = "Server=DESKTOP-L8E2KMH\\SQLEXPRESS;Database=Hospital;Integrated Security=True";
+        private static string path = File.ReadAllLines(@"D:\ConnectionString.txt").First();
 
+        public static string ConnectionString = $@"{path}";
 
     }
 }
