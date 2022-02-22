@@ -9,9 +9,173 @@ using System.Linq;
 //{
 //    DbInitializer.ResetDatabase(db);
 //}
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+//11.Total Book Copies
+//using (var db = new BookShopContext())
+//{
+//    var totalCopiesByAuthor = CountCopiesByAuthor(db);
+//    Console.WriteLine(totalCopiesByAuthor);
+//}
+
+//string CountCopiesByAuthor(BookShopContext db)
+//{
+//    var result = db.Authors
+//        .Select(a => new
+//        {
+//            AuthorName = $"{a.FirstName} {a.LastName}",
+//            TotalCopies = a.Books.Sum(b => b.Copies)
+//        })
+//        .OrderByDescending(b => b.TotalCopies)
+//        .ToArray();
+
+//    var sb = new StringBuilder();
+
+//    foreach (var a in result) sb.AppendLine($"{a.AuthorName} - {a.TotalCopies}");
+
+//    return sb.ToString().Trim();
+//}
+/*-------------------------------------------------------------------*/
+//10.Count Books
+//using (var db = new BookShopContext())
+//{
+//    var lengthCheck = int.Parse(Console.ReadLine());
+//    var result = CountBooks(db, lengthCheck);
+//    Console.WriteLine(result);
+//}
+
+//int CountBooks(BookShopContext db, int lengthCheck)
+//{
+//    var titlesLongerThan = db.Books.
+//        Where(b => b.Title.Length > lengthCheck)
+//        .Count();
+
+//    return titlesLongerThan;
+//}
+/*-------------------------------------------------------------------*/
+//9.Book Search by Author
+//using (var db = new BookShopContext())
+//{
+//    Console.Write("Type down a substring of Author name: ");
+//    var input = Console.ReadLine();
+
+//    var books = GetBooksByAuthor(db, input);
+//    Console.WriteLine(books);
+//}
+
+//string GetBooksByAuthor(BookShopContext db, string? input)
+//{
+//    if (string.IsNullOrEmpty(input))
+//        throw new Exception(ErrorMessages.EmptyInput);
+
+//    var books = db.Books
+//        .Where(b => b.Author.LastName.ToLower()
+//                                     .StartsWith(input.ToLower()))
+//        .OrderBy(b => b.BookId)
+//        .Select(b => new
+//        {
+//            b.Title,
+//            b.Author.FirstName,
+//            b.Author.LastName,
+//        })
+//        .ToArray();
+
+//    var sb = new StringBuilder();
+//    foreach (var b in books) sb.AppendLine($"{b.Title} ({b.FirstName} {b.LastName})");
 
 
+//    return sb.ToString().Trim();
 
+
+//}
+/*-------------------------------------------------------------------*/
+//8.Book Search
+//using (var db = new BookShopContext())
+//{
+//    Console.Write("Type down a substring of book title: ");
+//    var input = Console.ReadLine();
+
+//    var books = GetBookTitlesContaining(db, input);
+//    Console.WriteLine(books);
+//}
+
+//string GetBookTitlesContaining(BookShopContext db, string? input)
+//{
+//    if (String.IsNullOrEmpty(input)) 
+//        throw new Exception(ErrorMessages.EmptyInput);
+
+//    var books = db.Books
+//        .Where(b => b.Title.ToLower().Contains(input.ToLower()))
+//        .OrderBy(b => b.Title);
+
+//    var sb = new StringBuilder();
+//    foreach (var b in books) sb.AppendLine(b.Title);
+
+//    return sb.ToString().Trim();
+
+//}
+/*-------------------------------------------------------------------*/
+//7.Author Search
+//using (var db = new BookShopContext())
+//{
+//    Console.Write("Enter end substring of Author First Name:  ");
+//    var input = Console.ReadLine();
+
+//    var authors = GetAuthorNamesEndingIn(db, input);
+//    Console.WriteLine(authors);
+//}
+
+//string GetAuthorNamesEndingIn(BookShopContext db, string? input)
+//{
+//    var authors = db.Authors
+//        .Where(a => a.FirstName.EndsWith(input))
+//        .OrderBy(a => a.FirstName);
+
+//    var sb = new StringBuilder();
+
+//    foreach (var a in authors) sb.AppendLine($"{a.FirstName} {a.LastName}");
+
+//    return sb.ToString().Trim();
+//}
+/*-------------------------------------------------------------------*/
+//6.Release Before Date
+//using (var db = new BookShopContext())
+//{
+//    Console.Write("Type a date to show all books released before it: ");
+//    var date = Console.ReadLine();
+
+//    var result = GetBooksReleasedBefore(db, date);
+//    Console.WriteLine(result);
+//}
+
+//string GetBooksReleasedBefore(BookShopContext db, string? date)
+//{
+
+//    DateTime parsedDate;
+//    DateTime.TryParse(date, out parsedDate);
+
+//    var sb = new StringBuilder();
+
+//    var books = db.Books
+//        .Where(b => b.ReleaseDate < parsedDate)
+//        .OrderByDescending(b => b.ReleaseDate)
+//        .Select(b => new
+//        {
+//            b.Title,
+//            b.EditionType,
+//            b.Price
+//        });
+
+//    foreach (var book in books)
+//    {
+//        sb.AppendLine($"{book.Title} - {book.EditionType} - ${book.Price}");
+//    }
+
+//    return sb.ToString().Trim();
+//}
 /*-------------------------------------------------------------------*/
 //5.Book Titles by Category
 //using (var db = new BookShopContext())
@@ -44,7 +208,7 @@ using System.Linq;
 //       })
 //       .Where(b => b.Category.Name.ToLower() == categories[0].ToLower())
 //       .ToList();
-       
+
 
 //    for (int i = 1; i < categories.Length; i++)
 //    {
@@ -61,7 +225,7 @@ using System.Linq;
 //            books.Add(book);
 //        }
 
-            
+
 //    }
 
 //    foreach (var book in books.OrderBy(b => b.Book.Title))
@@ -129,7 +293,7 @@ using System.Linq;
 //    return sb.ToString().Trim();
 //}
 /*-------------------------------------------------------------------*/
-////2.Golden Books
+//2.Golden Books
 //using (var db = new BookShopContext())
 //{
 
@@ -153,7 +317,7 @@ using System.Linq;
 //    return sb.ToString().Trim();
 //}
 /*-------------------------------------------------------------------*/
-////1.Age Restriction
+//1.Age Restriction
 //using (var db = new BookShopContext())
 //{
 //    var command = Console.ReadLine().ToLower();
