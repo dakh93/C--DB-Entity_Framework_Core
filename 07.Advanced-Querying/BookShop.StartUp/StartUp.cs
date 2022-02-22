@@ -9,10 +9,100 @@ using System.Linq;
 //{
 //    DbInitializer.ResetDatabase(db);
 //}
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
 
+/*-------------------------------------------------------------------*/
+//15.Remove Books
+//using (var db = new BookShopContext())
+//{
+//    Console.WriteLine($"{RemoveBooks(db)} books were deleted");
+//}
+
+//int RemoveBooks(BookShopContext db)
+//{
+//    db.Books.RemoveRange(db.Books.Where(b => b.Copies < 4200));
+//    var affected = db.SaveChanges();
+
+//    return affected;
+//}
+/*-------------------------------------------------------------------*/
+//14.Increase Prices
+//using (var db = new BookShopContext())
+//{
+//    Console.WriteLine($"{IncreasePrices(db)} rows affected !!");
+//}
+
+//int IncreasePrices(BookShopContext db)
+//{
+//    var books = db.Books
+//        .Where(b => b.ReleaseDate.Value.Year < 2010);
+
+//    foreach (var b in books)
+//    {
+//        b.Price += 5;
+//    }
+//    var result = db.SaveChanges();
+//    return result;
+//}
+/*-------------------------------------------------------------------*/
+//13.Most Recent Books
+//using (var db = new BookShopContext())
+//{
+//    Console.WriteLine(GetMostRecentBooks(db));
+//}
+
+//string GetMostRecentBooks(BookShopContext db)
+//{
+
+
+//    var category = db.Categories
+//        .Select(bc => new
+//        {
+//            bc.Name,
+//            Top3Books = bc.BooksCategories
+//            .Select(b => b.Book)
+//            .OrderByDescending(b => b.ReleaseDate)
+//            .Take(3)
+//            .ToList()
+//        })
+//        .OrderBy(b => b.Name)
+//        .ToArray();
+
+//    var sb = new StringBuilder();
+//    foreach (var c in category)
+//    {
+//        sb.AppendLine($"--{c.Name}");
+//        foreach (var book in c.Top3Books)
+//        {
+//            sb.AppendLine($"{book.Title} ({book.ReleaseDate.Value.Year})");
+//        }
+//    }
+
+//    ;
+//    return sb.ToString().Trim();
+//}
+/*-------------------------------------------------------------------*/
+//12.Profit By Category
+//using (var db = new BookShopContext())
+//{
+//    Console.WriteLine(GetTotalProfitByCategory(db));
+//}
+
+//string GetTotalProfitByCategory(BookShopContext db)
+//{
+//    var result = db.Categories
+//        .Select(c => new
+//        {
+//            CategoryName = c.Name,
+//            TotalSum = c.BooksCategories.Sum(b => b.Book.Price * b.Book.Copies),
+//        })
+//        .OrderByDescending(c => c.TotalSum)
+//        .ToArray();
+
+//    var sb = new StringBuilder();
+//    foreach (var c in result) sb.AppendLine($"{c.CategoryName} ${c.TotalSum:F2}");
+
+//    return sb.ToString().Trim();
+//}
 /*-------------------------------------------------------------------*/
 //11.Total Book Copies
 //using (var db = new BookShopContext())
