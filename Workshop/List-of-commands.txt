@@ -1,0 +1,31 @@
+Тhese are all possible commands:
+
+•	RegisterUser <username> <password> <repeat-password> <firstName> <lastName> <age> <gender>
+
+•	Login <username> <password>
+
+•	Logout
+
+•	DeleteUser
+
+•	CreateEvent <name> <description> <startDate> <endDate>
+
+•	CreateTeam <name> <acronym> <description>
+
+•	InviteToTeam <teamName> <username>
+
+•	AcceptInvite <teamName>
+
+•	DeclineInvite <teamName>
+
+•	KickMember <teamName> <username>
+
+•	Disband <teamName>
+
+•	AddTeamTo <eventName> <teamName>
+
+•	ShowEvent <eventName>
+
+•	ShowTeam <teamName>
+
+•	Exit
